@@ -26,3 +26,11 @@ A five-day-forecast is displayed underneath the current weather:
 
 Finally, a city search history is displayed on the left of the site. These are buttons that can be clicked to re-search a past city:
 ![weather-tracker-search-history copy](https://user-images.githubusercontent.com/88065363/142569688-c6a8397f-158d-42e8-b612-afae8c1b9951.png)
+
+
+
+Contact Information:
+
+Email: sampagecode@gmail.com
+GitHub: https://github.com/xGrizabellax
+LinkedIn: https://www.linkedin.com/in/sam-page-444787106/
