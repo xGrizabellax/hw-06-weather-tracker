@@ -65,6 +65,7 @@ function fetchData(newCity) {
             var longitude = weatherData.coord.lon
             var todayDate = moment().format('L')
             var displayCity = document.querySelector('.current-city')
+            var displayIcon = document.querySelector('.current-icon')
             var temperature = document.querySelector('.temp')
             var wind = document.querySelector('.wind')
             var humidity = document.querySelector('.humidity')
@@ -87,6 +88,8 @@ function fetchData(newCity) {
 
                     todayDisplay.setAttribute('style', 'margin-top: 20px; border: solid 1px black;');
                     displayCity.textContent = weatherData.name + ' - ' + todayDate;
+                    var currentIcon = fiveDayData.daily[0].weather[0].icon
+                    displayIcon.setAttribute('src', 'http://openweathermap.org/img/wn/' + currentIcon + '@2x.png')
                     var currentTemp = weatherData.main.temp
                     temperature.textContent = 'Temp: ' + currentTemp + '°F';
                     var currentWind = weatherData.wind.speed
@@ -100,7 +103,7 @@ function fetchData(newCity) {
 
                     if (fiveDayData.daily[0].uvi < 3) {
                         indexSpan.setAttribute('style', 'background-color: green; color: white;')
-                    } else if (fiveDayData.daily[0].uvi >= 3 && fiveDayData.daily[0].uvi < 6) {
+                    } else if (fiveDayData.daily[0].uvi >= 3 && fiveDayData.daily[0].uvi < 5) {
                         indexSpan.setAttribute('style', 'background-color: yellow; color: black;')
                     } else {
                         indexSpan.setAttribute('style', 'background-color: red; color: white;')
